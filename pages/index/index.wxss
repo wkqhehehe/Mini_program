@@ -1,1 +1,1 @@
-.index_swiper swiper{width:750rpx;height:340rpx}.index_swiper swiper image{width:100%}
+.index_swiper swiper{width:750rpx;height:340rpx}.index_swiper swiper image{width:100%}.index_cate{display:flex}.index_cate nevigator{flex:1}.index_cate nevigator image{width:100px}

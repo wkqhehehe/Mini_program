@@ -2,13 +2,28 @@
     <SearchInput></SearchInput>
 </view>
 
-<swiper class="index_swiper" autoplay="true" circular="true" indicator-dots>
-    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator url="" open-type="navigate">
-            <image class="" src="{{item.image_src}}" />
+<view  class="index_swiper">
+    <swiper autoplay="true" circular="true" indicator-dots>
 
-        </navigator>
+        <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
 
-    </swiper-item>
+            <navigator url="" open-type="navigate">
 
-</swiper>
+                <image class="" src="{{item.image_src}}" />
+
+            </navigator>
+
+        </swiper-item>
+
+    </swiper>
+</view>
+
+<view class="index_cate">
+
+    <navigator wx:for="{{catesList}}" wx:key="name">
+
+        <image src="{{item.image_src}}" mode="widthFix" />
+
+    </navigator>
+
+</view>

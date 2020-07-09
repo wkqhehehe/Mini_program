@@ -5,7 +5,7 @@ import {
 Page({
   data: {
     swiperList: [],
-    cateList:[]
+    catesList: []
   },
   //options(Object)
   onLoad: function (options) {
@@ -18,15 +18,42 @@ Page({
     //   }
     // })
 
+    // request({
+    //     url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata"
+    //   })
+    //   .then(result => {
+    //     this.setData({
+    //       swiperList: result.data.message
+    //     })
+    //   })
+
+    this.getSwiperList();
+    this.getcatesList();
+
+  },
+  //获取轮播数组
+  getSwiperList() {
     request({
         url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata"
       })
       .then(result => {
         this.setData({
-          swiperList:result.data.message
+          swiperList: result.data.message
         })
-      });
-     
+      })
+
+  },
+
+  getcatesList() {
+    request({
+        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems"
+      })
+      .then(result => {
+        this.setData({
+          catesList: result.data.message
+        })
+      })
+
   }
 
 });
