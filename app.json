@@ -11,6 +11,7 @@
     "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
+    "pages/search/index",
     "pages/pay/index"
   ],
   "window": {
